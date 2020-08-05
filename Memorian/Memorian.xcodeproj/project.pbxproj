@@ -1,0 +1,645 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72A5056F24DAADB600A9D419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A5056E24DAADB600A9D419 /* AppDelegate.swift */; };
+		72A5057124DAADB600A9D419 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A5057024DAADB600A9D419 /* ContentView.swift */; };
+		72A5057324DAADC200A9D419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A5057224DAADC200A9D419 /* Assets.xcassets */; };
+		72A5057624DAADC200A9D419 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A5057524DAADC200A9D419 /* Preview Assets.xcassets */; };
+		72A5057924DAADC200A9D419 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A5057724DAADC200A9D419 /* Main.storyboard */; };
+		72A5058524DAADC400A9D419 /* MemorianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A5058424DAADC400A9D419 /* MemorianTests.swift */; };
+		72A5059024DAADC400A9D419 /* MemorianUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A5058F24DAADC400A9D419 /* MemorianUITests.swift */; };
+		72A5059E24DAADE000A9D419 /* DefaultPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A5059D24DAADE000A9D419 /* DefaultPage.swift */; };
+		72A505A124DAB0AD00A9D419 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 72A505A024DAB0AD00A9D419 /* Realm */; };
+		72A505A324DAB0AD00A9D419 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 72A505A224DAB0AD00A9D419 /* RealmSwift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		72A5058124DAADC400A9D419 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72A5056324DAADB600A9D419 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72A5056A24DAADB600A9D419;
+			remoteInfo = Memorian;
+		};
+		72A5058C24DAADC400A9D419 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72A5056324DAADB600A9D419 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72A5056A24DAADB600A9D419;
+			remoteInfo = Memorian;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		72A5056B24DAADB600A9D419 /* Memorian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorian.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72A5056E24DAADB600A9D419 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		72A5057024DAADB600A9D419 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		72A5057224DAADC200A9D419 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		72A5057524DAADC200A9D419 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		72A5057824DAADC200A9D419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		72A5057A24DAADC200A9D419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72A5057B24DAADC200A9D419 /* Memorian.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Memorian.entitlements; sourceTree = "<group>"; };
+		72A5058024DAADC300A9D419 /* MemorianTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemorianTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72A5058424DAADC400A9D419 /* MemorianTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorianTests.swift; sourceTree = "<group>"; };
+		72A5058624DAADC400A9D419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72A5058B24DAADC400A9D419 /* MemorianUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemorianUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72A5058F24DAADC400A9D419 /* MemorianUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorianUITests.swift; sourceTree = "<group>"; };
+		72A5059124DAADC400A9D419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72A5059D24DAADE000A9D419 /* DefaultPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPage.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		72A5056824DAADB600A9D419 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72A505A324DAB0AD00A9D419 /* RealmSwift in Frameworks */,
+				72A505A124DAB0AD00A9D419 /* Realm in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72A5057D24DAADC300A9D419 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72A5058824DAADC400A9D419 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72A5056224DAADB600A9D419 = {
+			isa = PBXGroup;
+			children = (
+				72A5056D24DAADB600A9D419 /* Memorian */,
+				72A5058324DAADC400A9D419 /* MemorianTests */,
+				72A5058E24DAADC400A9D419 /* MemorianUITests */,
+				72A5056C24DAADB600A9D419 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		72A5056C24DAADB600A9D419 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72A5056B24DAADB600A9D419 /* Memorian.app */,
+				72A5058024DAADC300A9D419 /* MemorianTests.xctest */,
+				72A5058B24DAADC400A9D419 /* MemorianUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72A5056D24DAADB600A9D419 /* Memorian */ = {
+			isa = PBXGroup;
+			children = (
+				72A5056E24DAADB600A9D419 /* AppDelegate.swift */,
+				72A5057024DAADB600A9D419 /* ContentView.swift */,
+				72A5059D24DAADE000A9D419 /* DefaultPage.swift */,
+				72A5057224DAADC200A9D419 /* Assets.xcassets */,
+				72A5057724DAADC200A9D419 /* Main.storyboard */,
+				72A5057A24DAADC200A9D419 /* Info.plist */,
+				72A5057B24DAADC200A9D419 /* Memorian.entitlements */,
+				72A5057424DAADC200A9D419 /* Preview Content */,
+			);
+			path = Memorian;
+			sourceTree = "<group>";
+		};
+		72A5057424DAADC200A9D419 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				72A5057524DAADC200A9D419 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		72A5058324DAADC400A9D419 /* MemorianTests */ = {
+			isa = PBXGroup;
+			children = (
+				72A5058424DAADC400A9D419 /* MemorianTests.swift */,
+				72A5058624DAADC400A9D419 /* Info.plist */,
+			);
+			path = MemorianTests;
+			sourceTree = "<group>";
+		};
+		72A5058E24DAADC400A9D419 /* MemorianUITests */ = {
+			isa = PBXGroup;
+			children = (
+				72A5058F24DAADC400A9D419 /* MemorianUITests.swift */,
+				72A5059124DAADC400A9D419 /* Info.plist */,
+			);
+			path = MemorianUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		72A5056A24DAADB600A9D419 /* Memorian */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72A5059424DAADC400A9D419 /* Build configuration list for PBXNativeTarget "Memorian" */;
+			buildPhases = (
+				72A5056724DAADB600A9D419 /* Sources */,
+				72A5056824DAADB600A9D419 /* Frameworks */,
+				72A5056924DAADB600A9D419 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Memorian;
+			packageProductDependencies = (
+				72A505A024DAB0AD00A9D419 /* Realm */,
+				72A505A224DAB0AD00A9D419 /* RealmSwift */,
+			);
+			productName = Memorian;
+			productReference = 72A5056B24DAADB600A9D419 /* Memorian.app */;
+			productType = "com.apple.product-type.application";
+		};
+		72A5057F24DAADC300A9D419 /* MemorianTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72A5059724DAADC400A9D419 /* Build configuration list for PBXNativeTarget "MemorianTests" */;
+			buildPhases = (
+				72A5057C24DAADC300A9D419 /* Sources */,
+				72A5057D24DAADC300A9D419 /* Frameworks */,
+				72A5057E24DAADC300A9D419 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72A5058224DAADC400A9D419 /* PBXTargetDependency */,
+			);
+			name = MemorianTests;
+			productName = MemorianTests;
+			productReference = 72A5058024DAADC300A9D419 /* MemorianTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		72A5058A24DAADC400A9D419 /* MemorianUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72A5059A24DAADC400A9D419 /* Build configuration list for PBXNativeTarget "MemorianUITests" */;
+			buildPhases = (
+				72A5058724DAADC400A9D419 /* Sources */,
+				72A5058824DAADC400A9D419 /* Frameworks */,
+				72A5058924DAADC400A9D419 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72A5058D24DAADC400A9D419 /* PBXTargetDependency */,
+			);
+			name = MemorianUITests;
+			productName = MemorianUITests;
+			productReference = 72A5058B24DAADC400A9D419 /* MemorianUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72A5056324DAADB600A9D419 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Che Blankenship";
+				TargetAttributes = {
+					72A5056A24DAADB600A9D419 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					72A5057F24DAADC300A9D419 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 72A5056A24DAADB600A9D419;
+					};
+					72A5058A24DAADC400A9D419 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 72A5056A24DAADB600A9D419;
+					};
+				};
+			};
+			buildConfigurationList = 72A5056624DAADB600A9D419 /* Build configuration list for PBXProject "Memorian" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 72A5056224DAADB600A9D419;
+			packageReferences = (
+				72A5059F24DAB0AC00A9D419 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
+			productRefGroup = 72A5056C24DAADB600A9D419 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72A5056A24DAADB600A9D419 /* Memorian */,
+				72A5057F24DAADC300A9D419 /* MemorianTests */,
+				72A5058A24DAADC400A9D419 /* MemorianUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72A5056924DAADB600A9D419 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72A5057924DAADC200A9D419 /* Main.storyboard in Resources */,
+				72A5057624DAADC200A9D419 /* Preview Assets.xcassets in Resources */,
+				72A5057324DAADC200A9D419 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72A5057E24DAADC300A9D419 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72A5058924DAADC400A9D419 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		72A5056724DAADB600A9D419 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72A5057124DAADB600A9D419 /* ContentView.swift in Sources */,
+				72A5059E24DAADE000A9D419 /* DefaultPage.swift in Sources */,
+				72A5056F24DAADB600A9D419 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72A5057C24DAADC300A9D419 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72A5058524DAADC400A9D419 /* MemorianTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72A5058724DAADC400A9D419 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72A5059024DAADC400A9D419 /* MemorianUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		72A5058224DAADC400A9D419 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72A5056A24DAADB600A9D419 /* Memorian */;
+			targetProxy = 72A5058124DAADC400A9D419 /* PBXContainerItemProxy */;
+		};
+		72A5058D24DAADC400A9D419 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72A5056A24DAADB600A9D419 /* Memorian */;
+			targetProxy = 72A5058C24DAADC400A9D419 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		72A5057724DAADC200A9D419 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72A5057824DAADC200A9D419 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		72A5059224DAADC400A9D419 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		72A5059324DAADC400A9D419 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		72A5059524DAADC400A9D419 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Memorian/Memorian.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Memorian/Preview Content\"";
+				DEVELOPMENT_TEAM = KA84XTSGKM;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Memorian/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.proto.Memorian;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		72A5059624DAADC400A9D419 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Memorian/Memorian.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Memorian/Preview Content\"";
+				DEVELOPMENT_TEAM = KA84XTSGKM;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Memorian/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.proto.Memorian;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		72A5059824DAADC400A9D419 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KA84XTSGKM;
+				INFOPLIST_FILE = MemorianTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.proto.MemorianTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Memorian.app/Contents/MacOS/Memorian";
+			};
+			name = Debug;
+		};
+		72A5059924DAADC400A9D419 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KA84XTSGKM;
+				INFOPLIST_FILE = MemorianTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.proto.MemorianTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Memorian.app/Contents/MacOS/Memorian";
+			};
+			name = Release;
+		};
+		72A5059B24DAADC400A9D419 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KA84XTSGKM;
+				INFOPLIST_FILE = MemorianUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.proto.MemorianUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Memorian;
+			};
+			name = Debug;
+		};
+		72A5059C24DAADC400A9D419 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KA84XTSGKM;
+				INFOPLIST_FILE = MemorianUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.proto.MemorianUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Memorian;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		72A5056624DAADB600A9D419 /* Build configuration list for PBXProject "Memorian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72A5059224DAADC400A9D419 /* Debug */,
+				72A5059324DAADC400A9D419 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72A5059424DAADC400A9D419 /* Build configuration list for PBXNativeTarget "Memorian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72A5059524DAADC400A9D419 /* Debug */,
+				72A5059624DAADC400A9D419 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72A5059724DAADC400A9D419 /* Build configuration list for PBXNativeTarget "MemorianTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72A5059824DAADC400A9D419 /* Debug */,
+				72A5059924DAADC400A9D419 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72A5059A24DAADC400A9D419 /* Build configuration list for PBXNativeTarget "MemorianUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72A5059B24DAADC400A9D419 /* Debug */,
+				72A5059C24DAADC400A9D419 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		72A5059F24DAB0AC00A9D419 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		72A505A024DAB0AD00A9D419 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72A5059F24DAB0AC00A9D419 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		72A505A224DAB0AD00A9D419 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72A5059F24DAB0AC00A9D419 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 72A5056324DAADB600A9D419 /* Project object */;
+}

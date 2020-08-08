@@ -211,29 +211,42 @@ extension AppDelegate {
     func showPopUp() {
         print("Show popup")
         let alert = NSAlert()
-        alert.messageText = "Please enable Memorian to access your keyboard."
-        alert.informativeText = "Memorian needs access to your keyboard so it can detect when you use the shortcut cmd+X and cmd+C. When Memorian detects these shortcuts, it will read the clipboard content and save it to your local computer memory. These results will show as in list. Go to System Preference > Privacy & Security to configure the settings. Follow the instructions shown on the app."
+        alert.messageText = "\"Memorian.app\" whould like to control this computer using accessibility feature."
+        alert.informativeText = "Grant access to this application in Security & Privacy preference, located in System Preferences."
         alert.alertStyle = .informational
-        alert.addButton(withTitle: "Open System Preference")
         alert.addButton(withTitle: "Deny")
+        alert.addButton(withTitle: "Open System Preferences")
+        alert.addButton(withTitle: "Learn more")
         
         let ret = alert.runModal()
         switch ret {
         case .alertFirstButtonReturn:
-            openSystemPreferenceAccesibilityPrivacy()
-        case .alertSecondButtonReturn:
             print("Denied")
+        case .alertSecondButtonReturn:
+            openSystemPreferenceAccesibilityPrivacy()
+        case .alertThirdButtonReturn:
+            openUrl()
         default:
             print("Other:\(ret)")
         }
     }
     
+    // Redirect the user to System Preference > Security & Privacy > [Privacy] > Accessibility
     func openSystemPreferenceAccesibilityPrivacy() {
-        print("Go to System Preference")
+        print("Go to System Preferences")
         let prefsURL = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility")!
         NSWorkspace.shared.open(prefsURL)
     }
     
+    // Redirect the user to Customer support page. Web page that shows how to allow accessibility.
+    func openUrl() {
+        let url = URL(string: "http://memorian_support.surge.sh/")!
+        if NSWorkspace.shared.open(url) {
+            print("Learn more page is launched.")
+            print("default browser was successfully opened")
+
+        }
+    }
 }
 
 

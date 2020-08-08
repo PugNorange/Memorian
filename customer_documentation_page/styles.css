@@ -1,0 +1,23 @@
+.title {
+    padding-top: 50px;
+}
+
+.common {
+    background-color: white;
+    padding-bottom: 50px;
+}
+
+.instruction_img {
+    height: 500px;
+    width: 600px;
+}
+
+.highlight {
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.foot {
+    padding: 50px;
+}

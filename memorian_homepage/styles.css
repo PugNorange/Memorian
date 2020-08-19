@@ -1,0 +1,104 @@
+
+.center-locate {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* header */
+.head {
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    align-content: center;
+}
+
+/* Icon section */
+.icon-section {
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+.app-icon-img {
+    width: 200px;
+    height: 200px;
+    filter: drop-shadow(5px 5px 5px #aaa);
+}
+/* -------------- */
+
+/* Download button and icon  */
+.download-section {
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+a.btn-download{
+  padding: 0.5em;
+  margin: 10px 0;
+  display: block;
+  color: #000 !important;
+  background: #99e6ff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size:16px;
+  border-radius: 3px;
+  text-align:center;
+  text-decoration:none !important;
+}
+a.btn-download:before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 5px 0 0;
+  background: url("./imgs/download_app.png") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+a.btn-download:hover {
+    color: #fff !important;
+    background: #00cc99;
+}
+
+@media screen and (min-width: 768px){
+  a.btn-download{
+    padding: 0.5em 2em;
+    margin: 10px auto;
+    font-size:20px;
+    display:inline-block;
+    }
+  a.btn-download:before {
+        margin: -3px 10px 0 0;
+    }
+}
+
+/* ---------- */
+
+/* Other buttons section */
+.footer-section {
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+/* source code */
+.btn-source-code {
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #666666;
+  border: solid 2px #666666;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.btn-source-code:hover {
+  background: #0099e6;
+  color: white;
+}
+
+.button-spacer {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+/* ----------- */

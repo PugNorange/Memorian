@@ -137,7 +137,6 @@ struct ContentView: View {
                     
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    //.frame(maxWidth: 380, maxHeight: 300)
                 
                 }
                 

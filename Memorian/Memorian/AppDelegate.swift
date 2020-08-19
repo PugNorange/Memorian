@@ -9,6 +9,8 @@
 import Cocoa
 import SwiftUI
 import RealmSwift
+import Foundation
+
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -16,16 +18,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        
-        
-        
+                
         // 1. Check & allow "Security and Privacy".
-        let checkAccesibilityResult = checkAccesibility();
+        let checkAccesibilityResult = isAccessibilityEnabled(isPrompt: true);
 
+        // 2. Show default page if accessibility is disabled. If accessibility is enabled, show clipboard history page.
         if checkAccesibilityResult == false {
+            
+            // Show an alert that informs user to enable accessibility.
+             enableAccessibilityAlert()
+            
             // Create the SwiftUI view that provides the window contents.
             let contentView = DefaultPage()
-
             // Create the window and set the content view.
             window = NSWindow(
                 contentRect: NSRect(x: 0, y: 0, width: 380, height: 300),
@@ -36,7 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             window.contentView = NSHostingView(rootView: contentView)
             window.makeKeyAndOrderFront(nil)
             window.title = "Initial Setting Page"
-            showPopUp()
+            
         } else {
             // Create the SwiftUI view that provides the window contents.
             let contentView = ContentView().environmentObject(ClipBoard())
@@ -51,23 +55,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             window.contentView = NSHostingView(rootView: contentView)
             window.makeKeyAndOrderFront(nil)
             window.title = "Memorian | Clipboard History"
+            
+            // 3. Refresh the clipboard page to get the latest clipboard data.
             self.refreshClipboardHistory()
         }
-        
-        
-//        // Create the SwiftUI view that provides the window contents.
-//        let contentView = ContentView().environmentObject(ClipBoard())
-//
-//        // Create the window and set the content view.
-//        window = NSWindow(
-//            contentRect: NSRect(x: 0, y: 0, width: 380, height: 300),
-//            styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-//            backing: .buffered, defer: false)
-//        window.center()
-//        window.setFrameAutosaveName("Main Window")
-//        window.contentView = NSHostingView(rootView: contentView)
-//        window.makeKeyAndOrderFront(nil)
-//        window.title = "Memorian | Clipboard History"
         
         
         // Add copied data into the DB if cmd+c or cmd+x is detected.
@@ -97,7 +88,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
 
-// Realm functions
+// REALM related code.
 extension AppDelegate {
     
 //    This commented script is for updating realm file schema (ex, adding column etc). Necessary for the future db schema update.
@@ -113,7 +104,6 @@ extension AppDelegate {
 //        } catch let error {
 //            print("error copying realm file: \(error)")
 //        }
-//
 //        return bundleRealmPath!.absoluteString
 //    }
     
@@ -128,7 +118,7 @@ extension AppDelegate {
         
         // Set realm DB data as list. (going to use it for checking duplication)
         let queryData = Array(realm.objects(ItemEntity.self))
-                
+        print("realm db data >> ", queryData)
         // Get the whole clipboard content.
         guard let pasteboardItems = NSPasteboard.general.pasteboardItems else {
             return
@@ -189,26 +179,43 @@ extension AppDelegate {
 }
 
 
+// ACCESSIBILITY related code.
 extension AppDelegate {
     
+    
+//    func check() -> Bool {
+//        let options = NSDictionary(
+//            object: kCFBooleanTrue ?? true,
+//            forKey: kAXTrustedCheckOptionPrompt.takeUnretainedValue() as NSString
+//            ) as CFDictionary
+//
+//        print("CHECK option value >> ", options)
+//        print("Check AXIs >> ", AXIsProcessTrustedWithOptions(options))
+//        return AXIsProcessTrustedWithOptions(options)
+//
+//    }
+    
+    
     // Check keyboard accesibility permission.
-    func checkAccesibility() -> Bool {
-        
-        let options: NSDictionary = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as String : true]
+    func isAccessibilityEnabled(isPrompt: Bool) -> Bool {
+        /// Accessibility permission is required for paste command from macOS 10.14 Mojave.
+        /// For macOS 10.14 and later only, check accessibility permission at startup and paste
+        //guard #available(macOS 10.14, *) else { return true }
+        let options = NSDictionary(object: kCFBooleanTrue ?? true, forKey: kAXTrustedCheckOptionPrompt.takeUnretainedValue() as NSString) as CFDictionary
+        //let options: NSDictionary = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as NSString : isPrompt]
         let accessEnabled = AXIsProcessTrustedWithOptions(options)
         if !accessEnabled {
             print("Access Not Enabled")
-            return false
-            
         } else{
             print("Able to access keyboard")
-            return true
         }
         
+        return accessEnabled
     }
     
+    
     // Show an alert if accesibility is disabled.
-    func showPopUp() {
+    func enableAccessibilityAlert() {
         print("Show popup")
         let alert = NSAlert()
         alert.messageText = "\"Memorian.app\" whould like to control this computer using accessibility feature."
@@ -217,7 +224,9 @@ extension AppDelegate {
         alert.addButton(withTitle: "Deny")
         alert.addButton(withTitle: "Open System Preferences")
         alert.addButton(withTitle: "Learn more")
+        NSApp.activate(ignoringOtherApps: true)
         
+        // Switch based on which button the user clicks
         let ret = alert.runModal()
         switch ret {
         case .alertFirstButtonReturn:
@@ -234,8 +243,8 @@ extension AppDelegate {
     // Redirect the user to System Preference > Security & Privacy > [Privacy] > Accessibility
     func openSystemPreferenceAccesibilityPrivacy() {
         print("Go to System Preferences")
-        let prefsURL = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility")!
-        NSWorkspace.shared.open(prefsURL)
+        let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility")!
+        NSWorkspace.shared.open(url)
     }
     
     // Redirect the user to Customer support page. Web page that shows how to allow accessibility.
